@@ -27,5 +27,10 @@ public:
 	int getMaxPassengers() const;
 
 	void printInfo() const;
+
+	bool operator==(const Airplane& other) const;
+	bool operator!=(const Airplane& other) const;
+
+
 };
 

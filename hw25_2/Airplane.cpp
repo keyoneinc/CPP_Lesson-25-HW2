@@ -55,3 +55,13 @@ void Airplane::printInfo() const {
     cout << "Passengers count: " << currentPassengers << endl;
     cout << "Maximum passengers in the plane: " << maxPassengers << endl;
 }
+
+bool Airplane::operator==(const Airplane& other) const
+{
+    return this->flightNumber == other.flightNumber;
+}
+
+bool Airplane::operator!=(const Airplane& other) const
+{
+    return !(*this == other);
+}
