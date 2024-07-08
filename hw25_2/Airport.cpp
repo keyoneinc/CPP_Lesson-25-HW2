@@ -38,6 +38,50 @@ void Airport::sortByFlightNumber()
         });
 }
 
+//void Airport::boardPassengers(int flightNumber, int passengers) {
+//    Airplane* airplane = findAirplane(flightNumber);
+//    if (airplane) {
+//        int availableSeats = airplane->getMaxPassengers() - airplane->getCurrentPassengers();
+//        if (passengers <= availableSeats && passengers > 0) {
+//            airplane->addPassenger(passengers);
+//            cout << passengers << " passengers successfully boarded on flight " << flightNumber << endl;
+//        }
+//        else {
+//            if (passengers <= 0) {
+//                cout << "Invalid number of passengers. Please enter a positive number." << endl;
+//            }
+//            else {
+//                cout << "Not enough seats on flight " << flightNumber << ".\n";
+//            }
+//        }
+//    }
+//    else {
+//        cout << "Airplane with flight number " << flightNumber << " not found!" << endl;
+//    }
+//}
+//
+//void Airport::disembarkPassengers(int flightNumber, int passengers) {
+//    Airplane* airplane = findAirplane(flightNumber);
+//    if (airplane) {
+//        if (passengers <= airplane->getCurrentPassengers() && passengers > 0) {
+//            airplane->removePassenger(passengers);
+//            cout << passengers << " passengers successfully disembarked from flight " << flightNumber << endl;
+//        }
+//        else {
+//            if (passengers <= 0) {
+//                cout << "Invalid number of passengers" << endl;
+//            }
+//            else {
+//                cout << "Not enough passengers on flight " << flightNumber << ".\n";
+//            }
+//        }
+//    }
+//    else {
+//        cout << "Airplane with flight number " << flightNumber << " not found!" << endl;
+//    }
+//}
+
+
 void Airport::printSchedule() const
 {
     if (schedule.empty()) {
