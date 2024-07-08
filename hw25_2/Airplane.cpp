@@ -65,3 +65,33 @@ bool Airplane::operator!=(const Airplane& other) const
 {
     return !(*this == other);
 }
+
+Airplane& Airplane::operator++()
+{
+    if (currentPassengers < maxPassengers) {
+        currentPassengers++;
+    }
+    return *this;
+}
+
+Airplane& Airplane::operator--()
+{
+    if (currentPassengers > 0) {
+        currentPassengers--;
+    }
+    return *this;
+}
+
+Airplane Airplane::operator++(int)
+{
+    Airplane temp = *this;
+    ++(*this);
+    return temp;
+}
+
+Airplane Airplane::operator--(int)
+{
+    Airplane temp = *this;
+    --(*this);
+    return temp;
+}

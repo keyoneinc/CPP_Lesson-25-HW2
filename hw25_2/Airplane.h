@@ -31,6 +31,10 @@ public:
 	bool operator==(const Airplane& other) const;
 	bool operator!=(const Airplane& other) const;
 
+	Airplane &operator++();
+	Airplane &operator--();
+	Airplane operator++(int);
+	Airplane operator--(int);
 
 };
 
