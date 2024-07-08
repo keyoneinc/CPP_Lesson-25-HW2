@@ -1,9 +1,10 @@
 #include "Airport.h"
 
-void Airport::addAirplane(const Airplane& airplane)
-{
-	schedule.push_back(airplane);
-	cout << "Airplane with number " << airplane.getFlightNumber() << " added to schedule" << endl;
+void Airport::addAirplane(int flightNumber, string destination, int maxPassengers) {
+    Airplane airplane(flightNumber, destination, maxPassengers);
+
+    schedule.push_back(airplane);
+    cout << "Airplane with flight number " << flightNumber << " added to schedule!" << endl;
 }
 
 void Airport::removeAirplane(int flightNumber)

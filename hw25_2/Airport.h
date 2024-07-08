@@ -11,7 +11,7 @@ private:
 	vector<Airplane> schedule;
 
 public:
-    void addAirplane(const Airplane& airplane);
+    void addAirplane(int flightNumber, string destination, int maxPassengers);
     void removeAirplane(int flightNumber);
     Airplane* getAirplane(int flightNumber) const;
 
