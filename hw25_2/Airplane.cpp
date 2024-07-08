@@ -95,3 +95,23 @@ Airplane Airplane::operator--(int)
     --(*this);
     return temp;
 }
+
+bool Airplane::operator>(const Airplane& other) const
+{
+    return this->maxPassengers > other.maxPassengers;
+}
+
+bool Airplane::operator>=(const Airplane& other) const
+{
+    return this->maxPassengers >= other.maxPassengers;
+}
+
+bool Airplane::operator<(const Airplane& other) const
+{
+    return this->maxPassengers < other.maxPassengers;
+}
+
+bool Airplane::operator<=(const Airplane& other) const
+{
+    return this->maxPassengers <= other.maxPassengers;
+}

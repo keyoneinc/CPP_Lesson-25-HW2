@@ -36,5 +36,11 @@ public:
 	Airplane operator++(int);
 	Airplane operator--(int);
 
+	bool operator>(const Airplane& other) const;
+	bool operator>=(const Airplane& other) const;
+	bool operator<(const Airplane& other) const;
+	bool operator<=(const Airplane& other) const;
+
+
 };
 
