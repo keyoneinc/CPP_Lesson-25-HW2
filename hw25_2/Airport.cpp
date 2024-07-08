@@ -21,6 +21,16 @@ void Airport::removeAirplane(int flightNumber)
     }
 }
 
+Airplane* Airport::getAirplane(int flightNumber) const
+{
+    for (const Airplane& airplane : schedule) {
+        if (airplane.getFlightNumber() == flightNumber) {
+            return const_cast<Airplane*>(&airplane);
+        }
+    }
+    return nullptr;
+}
+
 Airplane* Airport::findAirplane(int flightNumber)
 {
     for (Airplane& airplane : schedule) {

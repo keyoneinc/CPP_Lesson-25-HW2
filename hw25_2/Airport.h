@@ -13,6 +13,7 @@ private:
 public:
     void addAirplane(const Airplane& airplane);
     void removeAirplane(int flightNumber);
+    Airplane* getAirplane(int flightNumber) const;
 
     Airplane* findAirplane(int flightNumber);
     void sortByFlightNumber();
